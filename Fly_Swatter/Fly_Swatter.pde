@@ -62,6 +62,7 @@ void draw() {
     slap.play();
     collisionDetect();
     image(swatted, mouseX-35, mouseY-25);
+    delay(100); //temporary fix for holding mouse down sound bug
   } else { // if not pressed then alternative image.
     image(swatter, mouseX-35, mouseY-25);
   }    
@@ -73,7 +74,7 @@ void draw() {
   hiscores();
 }
 
-void hiscores() { //TODO hiscore animations
+void hiscores() { //Scoring additional functions aand graphics
   if (score == 5) {
     text("PENTAKILL", width/2, height/2);
     textAlign(CENTER);
@@ -99,6 +100,8 @@ void hiscores() { //TODO hiscore animations
 void flyMovement() { //TODO fly movement
 }
 
+
+// Populates the screen with fly
 void populate() {
   for (int i=0; i<fX.length; i++)
   {
